@@ -1,0 +1,26 @@
+<ion-header-bar class="bar-positive">
+	<div class="buttons">
+	<button class="button button-icon icon ion-arrow-left-c" ui-sref="tab.find"></button>
+	</div>
+	<h2 class="title">热卖商品</h2>
+</ion-header-bar>
+<ion-content class="has-header">
+	<ul class="shopList">
+<!-- 	<li class="qgitem avail">
+		<div class="pic"><img src="img/1.jpg" alt=""></div>
+		<div class="baseinfo">
+			<div class="name">新款牛仔背带裤女阔腿裤休闲裤</div>
+			<div class="merit">减龄遮肚子肉显瘦</div>
+			<div class="price">￥50</div>
+		</div>
+	</li> -->
+<li class="qgitem avail" ng-repeat="info in shopInfo">
+	<div class="pic"><img ng-src="{{info.img}}" alt=""></div>
+	<div class="baseinfo">
+		<div class="name">{{info.name}}</div>
+		<div class="merit">{{info.merit}}</div>
+		<div class="price">{{info.price}}</div>
+	</div>
+</li>
+</ul>
+</ion-content>

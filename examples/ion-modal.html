@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>模型</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("myApp",["ionic"])
+		.controller("modalCtrl",function($scope,$ionicModal){
+			$scope.nameList=[
+				{name:"Jack Mike",email:"jack@gmail.com"},
+				{name:"John Smith",email:"john@gmail.com"},
+				{name:"Jane Rose",email:"jane@gmail.com"},
+			];
+			$ionicModal.fromTemplateUrl("newPeople.html",{
+				scope:$scope
+			})
+			.then(function(modal){
+				$scope.modal= modal;
+			});
+			$scope.createPeople = function(people){
+				$scope.nameList.push({name:people.firstname +' ' +people.lastname,email:people.email});
+				$scope.modal.hide();
+			};
+			$scope.clear = function(){
+				var inputs = document.getElementsByTagName("input");
+				for(var i= 0,len=inputs.length;i<len;i++)
+				inputs[i].value="";
+			};
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="modalCtrl">
+	<ion-header-bar class="bar-positive">
+		<h2 class="title">通讯录</h2>
+		<div class="buttons"><button class="button button-icon ion-compose" ng-click="modal.show()"></button></div>
+	</ion-header-bar>
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="item in nameList">
+				{{item.name}}
+				<i class="icon ion-paper-airplane accessory"></i>
+				{{item.email}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+	<script type="text/ng-template" id="newPeople.html">
+		<ion-modal-view>
+			<ion-header-bar class="bar bar-header bar-balanced">
+			<button class="button button-clear button-assertive" ng-click="clear()">清空</button>
+				<h2 class="title">新增联系人</h2>
+				<button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+			</ion-header-bar>
+			<ion-content class="padding">
+				<div class="list">
+					<label class="item item-input"><span class="input-label">First-Name</span><input type="text" ng-model="newPeople.firstname"></label>
+					<label class="item item-input"><span class="input-label">Last-Name</span><input type="text" ng-model="newPeople.lastname"></label>
+					<label class="item item-input"><span class="input-label">Email</span><input type="email" ng-model="newPeople.email"></label>
+					<button class="button button-full button-balanced" ng-click="createPeople(newPeople)">确定</button>
+				</div>
+			</ion-content>
+		</ion-modal-view>
+	</script>
+</body> 
+</html>

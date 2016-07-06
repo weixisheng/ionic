@@ -1,0 +1,100 @@
+<ion-header-bar align-title="left" class="bar-dark">
+	    <div class="h1 title">微信(16)</div>
+	    <div class="buttons">
+	        <button class="button no-animation button-icon icon ion-android-search">
+	        </button>
+	        <button class="button no-animation button-icon icon ion-android-add" ng-click="showMore()">
+	        </button>
+	    </div>
+        <div class="moreBlock" style="position:absolute;right:10px;top:44px;width:50%;visibility:hidden;">
+            <div class="list">
+                <ion-item class="rj-item more-item"><div class="rj-contacts-pic">
+                    <i class="icon ion-android-chat"></i>
+                </div><h2>发起群聊</h2></ion-item>
+                <ion-item class="rj-item more-item"><div class="rj-contacts-pic">
+                    <i class="icon ion-android-person-add"></i>
+                </div><h2>添加朋友</h2></ion-item>
+                <ion-item class="rj-item more-item"><div class="rj-contacts-pic">
+                    <i class="icon ion-qr-scanner"></i>
+                </div><h2>扫一扫</h2></ion-item>
+                <ion-item class="rj-item more-item"><div class="rj-contacts-pic">
+                    <i class="icon ion-social-yen"></i>
+                </div><h2>收付款</h2></ion-item>
+                <ion-item class="rj-item more-item"><div class="rj-contacts-pic">
+                    <i class="icon ion-email"></i>
+                </div><h2>帮助与反馈</h2></ion-item>
+            </div>
+        </div>
+
+	</ion-header-bar>
+<ion-view>
+    <ion-content on-swipe-right="onSwipeRight()">
+        <div class="list">
+        	<ion-item class="item item-avatar item-complex">
+        		<div class="item-content">
+        			<img src="img/me.jpg" alt="">
+        			<h2>囍</h2>
+        			<p>微信号 : hishion_wax</p>
+                    <span class="icon ion-android-apps right-qr" ng-click="showQr()"></span>
+        		</div>
+        	</ion-item>
+            <div class="rj-contacts-index-bar"></div>
+            <ion-item class="rj-item item">
+                <div class="rj-contacts-pic rj-royal">
+                    <i class="icon ion-android-image"></i>
+                </div>
+                    <h2>相册</h2>
+            </ion-item>
+            <ion-item class="rj-item item">
+                <div class="rj-contacts-pic rj-royal">
+                    <i class="icon ion-star"></i>
+                </div>
+                    <h2>收藏</h2>
+            </ion-item>
+            <div class="rj-contacts-index-bar"></div>
+            <ion-item class="rj-item item" ng-click="goWallet()">
+                <div class="rj-contacts-pic rj-positive">
+                    <i class="icon ion-ios-briefcase"></i>
+                </div>
+                    <h2>钱包
+                    <span class="unprotected">理财管家</span></h2>
+            </ion-item>
+             <ion-item class="rj-item item">
+                <div class="rj-contacts-pic rj-positive">
+                    <i class="icon ion-ios-photos"></i>
+                </div>
+                    <h2>卡券</h2>
+            </ion-item>
+            <div class="rj-contacts-index-bar"></div>
+            <ion-item class="rj-item item">
+                <div class="rj-contacts-pic rj-energized">
+                    <i class="icon ion-android-happy"></i>
+                </div>
+                    <h2>表情</h2>
+            </ion-item>
+                        <div class="rj-contacts-index-bar"></div>
+            <ion-item class="rj-item item" ng-click="goSetting()">
+                <div class="rj-contacts-pic rj-positive">
+                    <i class="icon ion-ios-gear"></i>
+                </div>
+                    <h2>设置
+                    <span class="unprotected">账号未保护</span>
+                    </h2>
+            </ion-item>
+        </div>
+    </ion-content>
+    
+</ion-view>
+ <script type="text/ng-template" id="showQrTemplate.html">
+    <ion-modal-view ng-click="closeModal()" style="margin:12% 10% 0 10%;min-height:50%;width:80%;background-color:rgba(70,70,70,0.68);">
+        <ion-header-bar style="background-color:rgba(70,70,70,0.68);">
+            <h2 class="title" style="color:white;">扫一扫加我微信哦~</h2>
+            <!-- <button class="button button-clear" ng-click="closeModal()">&times;</button> -->
+        </ion-header-bar>
+        <ion-content>
+            <div class="padding">
+                <img src="img/weixin.jpg" alt="微信二维码" style="width:80%;margin-left:10%;">
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

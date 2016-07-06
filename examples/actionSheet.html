@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"> 
+	<title>ActionSheet 上拉菜单</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module('starter',['ionic'])
+		.run(function($ionicPlatform){
+			$ionicPlatform.ready(function(){
+				if(window.cordova && window.cordova.plugins.Keyboard){
+					cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+				}
+				if(window.StatusBar){
+					StatusBar.styleDefault();
+					console.log("window statusBar");
+				}
+			});
+		})
+		.controller('actionsheetCtrl',['$scope','$ionicActionSheet','$timeout',
+			function($scope,$ionicActionSheet,$timeout){
+				$scope.show = function(){
+					var hideSheet = $ionicActionSheet.show({
+						buttons:[
+							{text:"<b>Share</b> this"},
+							{text:"Move"}
+						],
+						destructiveText:"Delete",
+						titleText:"Menu",
+						cancelText:"Cancel",
+						cancel:function(){
+							
+						},
+						buttonClicked:function(index){
+							return true;
+						}
+					});
+					$timeout(function(){
+						hideSheet();
+					},2000);
+				};
+			}])
+	</script>
+</head>
+<body ng-app="starter" ng-controller="actionsheetCtrl">
+	<ion-pane>
+		<ion-content>
+			<h2 ng-click="show()">点击显示-上拉菜单</h2>
+		</ion-content>
+	</ion-pane>
+</body>
+</html>

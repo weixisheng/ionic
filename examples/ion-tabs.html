@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>选项卡栏</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("myApp",["ionic"])
+		.controller("appCtrl",function($scope){
+			$scope.onControllerChanged = function(oldController,oldIndex,newController,newIndex){
+				console.log("controller changed:",oldController,oldIndex,newController,newIndex);
+				console.log(arguments);
+			};
+		})
+		.controller("homeCtrl",function($scope,$timeout,$ionicModal){
+			$scope.items=[];
+			
+			$ionicModal.fromTemplateUrl("taskModal.html",function(modal){
+				$scope.modal = modal;
+				
+			});
+			$scope.newTask=function(){
+				$scope.modal.show();
+			};
+			for(var i =1;i<21;i++){
+				$scope.items.push({
+					title:"任务"+i
+				});
+			}
+		})
+		.controller("taskCtrl",function($scope){
+			
+			$scope.close = function(){
+				
+					$scope.modal.hide();
+				
+			};
+
+		})
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="appCtrl">
+	<ion-tabs class="tabs-assertive tabs-icon-only">
+		<ion-tab title="首页" icon-on="icon ion-ios-home" icon-off="icon ion-ios-home-outline" ng-controller="homeCtrl">
+			<ion-header-bar class="bar-balanced">
+				<button class="button button-clear" ng-click="newTask()">新建</button>
+				<h2 class="title">任务清单</h2>
+			</ion-header-bar>
+			<ion-content>
+				<ion-refresher></ion-refresher>
+				<ion-list>
+					<ion-item ng-repeat="item in items"><i class="icon ion-ios-copy"></i>{{item.title}}</ion-item>
+				</ion-list>
+			</ion-content>
+		</ion-tab>
+		<ion-tab title="关于" icon-on="icon ion-ios-information" icon-off="icon ion-ios-information-outline">
+			<header class="bar bar-header bar-positive">
+				<h2 class="title">关于</h2>
+			</header>
+			<ion-content class="has-header">
+				<div class="padding">关于页面</div>
+				<div class="padding">使用选项卡</div>
+			</ion-content>
+		</ion-tab>
+		<ion-tab title="设置" icon-on="icon ion-ios-gear" icon-off="icon ion-ios-gear-outline">
+			<header class="bar bar-header bar-energized">
+				<h2 class="title">设置</h2>
+			</header>
+			<ion-content class="has-header">
+				<div class="padding">设置页面</div>
+				<div class="padding">使用选项卡</div>
+			</ion-content>
+		</ion-tab>
+	</ion-tabs>
+
+	<script type="text/ng-template" id="taskModal.html">
+		<div id="task-view" class="modal slide-in-up" ng-controller="taskCtrl">
+			<header class="bar bar-header bar-secondary">
+				<h2 class="title">新任务</h2>
+				<button class="button button-clear button-assertive" ng-click="close()">完成</button>
+			</header>
+			<ion-content class="has-header padding">
+				<input type="text" placeholder="输入你要做的事...">
+			</ion-content>
+		</div>
+	</script>
+</body>
+</html>

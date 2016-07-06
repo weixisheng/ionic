@@ -1,0 +1,38 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4"
+  },
+  "name": "ionic",
+  "version": "1.0.0",
+  "description": "ionic examples",
+  "main": "gulpfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weixisheng/ionic.git"
+  },
+  "keywords": [
+    "ionic",
+    "examples"
+  ],
+  "author": "hishion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weixisheng/ionic/issues"
+  },
+  "homepage": "https://github.com/weixisheng/ionic#readme"
+}

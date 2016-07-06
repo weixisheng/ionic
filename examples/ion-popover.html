@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>弹出框</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("myApp",["ionic"])
+		.controller("popoverCtrl",["$scope","$ionicPopover",function($scope,$ionicPopover){
+			$scope.popover = $ionicPopover.fromTemplateUrl("thepopover.html",{
+				scope:$scope
+			});
+
+			$ionicPopover.fromTemplateUrl("thepopover.html",{
+				scope:$scope
+			}).then(function(popover){
+				$scope.popover = popover;
+			});
+
+			$scope.showPop = function($event){
+				$scope.popover.show($event);
+			};
+
+			$scope.hidePop = function(){
+				$scope.popover.hide();
+			};
+
+			$scope.$on("$destroy",function(){
+				console.log("popover destroy");
+			});
+
+			$scope.$on("popover.hidden",function(){
+				console.log("popover hidden");
+			});
+
+			$scope.$on("popover.removed",function(){
+				console.log("popover removed");
+			});
+		}])
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="popoverCtrl">
+	<button class="button button-positive" ng-click="showPop($event)">弹出框</button>
+	<script type="text/ng-template" id="thepopover.html">
+		<ion-popover-view>
+			<ion-header-bar>
+				<h2 class="title">前端框架</h2>
+			</ion-header-bar>
+			<ion-content>
+				<div class="list">
+					<div class="item">ionic</div>
+				</div>
+				<button class="button button-assertive" ng-click="hidePop()">隐藏</button>
+			</ion-content>
+		</ion-popover-view>
+	</script>
+</body>
+</html>

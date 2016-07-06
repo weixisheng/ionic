@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>滚动条</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("myApp",["ionic"])
+		.controller("scrollCtrl",["$scope","$http",function($scope,$http){
+			$scope.items=[
+				{name:"hello"},
+				{name:"world"}
+			];
+			// $scope.loadMore = function(){
+			// 	$http.get("names.json").success(function(newitems){
+			// 		$scope.items=newitems;
+			// 		$scope.$broadcast("scroll.infiniteScrollComplete");
+			// 	});
+			// };
+
+			// $scope.$on("stateChangeSuccess",function(){
+			// 	$scope.loadMore();
+			// });
+		}])
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="scrollCtrl">
+<!-- <ion-header-bar class="bar-positive">
+	<h2 class="title">滚动例子</h2>
+</ion-header-bar>
+<ion-content> -->
+<ion-view title="滚动例子" hide-nav-bar="true">
+	<ion-scroll zooming="true" direction="y">  
+		<div class="list"> 
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+			<div class="item">6</div>
+			<div class="item">7</div>
+			<div class="item">8</div>
+			<div class="item">9</div>
+			<div class="item">10</div>
+			<div class="item">11</div>
+			<div class="item">12</div>
+			<div class="item">13</div>
+			<div class="item">14</div>
+			<div class="item">15</div>
+			<div class="item">16</div>
+			<div class="item">17</div>
+			<div class="item">18</div>
+			<div class="item">19</div>
+			<div class="item">20</div>
+			<!-- <div class="item" ng-repeat="item in items">{{item.name}}</div> -->
+		</div>
+	</ion-scroll>
+</ion-view>
+	
+	
+<!-- </ion-content> -->
+</body>
+</html>

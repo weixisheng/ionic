@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>切换开关例子</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("toggle",["ionic"])
+		.run(function($ionicPlatform){
+			$ionicPlatform.ready(function(){
+				if(window.cordova && window.cordova.plugins.Keyboard){
+					cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+				}
+				if(window.StatusBar){
+					StatusBar.styleDefault();
+				}
+			});
+		})
+		.controller("toggleCtrl",["$scope",function($scope){
+			$scope.settings=[
+				{"pic":"ion-wifi","text":"WIFI",checked:true},
+				{"pic":"ion-ios-location","text":"GPS",checked:false},
+				{"pic":"ion-bluetooth","text":"Bluetooth",checked:false}
+			];
+			$scope.notice={checked:false};
+			$scope.noticeChange= function(){
+				console.log("change:",$scope.notice.checked);
+			};
+			$scope.subscribe="加密";
+		}])
+	</script>
+</head>
+<body ng-app="toggle" ng-controller="toggleCtrl">
+	<ion-bar-header class="balanced">
+		<h2 class="title">切换开关</h2>
+	</ion-bar-header>
+	<div class="list">
+		<div class="item item-divider">多个例子</div>
+		<ion-toggle ng-repeat="item in settings" ng-model="item.checked" ng-checked="item.checked">
+			<i class="icon {{item.pic}} positive"></i>{{item.text}}
+		</ion-toggle>
+		<div>
+			<pre ng-bind="settings | json"></pre>
+		</div>
+
+		<div class="item item-divider">单个例子</div>
+		<ion-toggle ng-model="notice.checked" ng-change="noticeChange()">
+			点我变身
+		</ion-toggle>
+		<div class="item">
+			<div ng-bind="notice | json"></div>
+		</div>
+
+		<div class="item item-divider">开关</div>
+		<ion-toggle ng-model="subscribe" ng-true-value="'加密'" ng-false-value="'解密'">
+			应用程序
+		</ion-toggle>
+		<div class="item">
+			<div ng-bind="subscribe | json"></div>
+		</div>
+	</div>
+</body>
+</html>

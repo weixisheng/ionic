@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>对话框</title>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("myApp",["ionic"])
+		.controller("popupCtrl",["$scope","$ionicPopup","$timeout",function($scope,$ionicPopup,$timeout){
+	//对话框		
+			$scope.showPopup = function(){
+				$scope.data = {};
+
+				//自定义弹窗
+				var thePopup = $ionicPopup.show({
+					templateUrl:"popup-template.html",
+					title:"wifi密码",
+					scope:$scope,
+					buttons:[
+						{text:"取消",type:"button-assertive"},
+						{
+							text:"保存",
+							type:"button-balanced",
+							onTap:function(e){
+								if(!$scope.data.wifi)
+									e.preventDefault();
+								else
+									return $scope.data.wifi;
+							}}
+					]
+				});
+				thePopup.then(function(res){
+					console.log("tap!",res);
+				});
+				// $timeout(function(){
+				// 	thePopup.close();
+				// },3000);
+			};
+	//确认框
+			$scope.showConfirm = function(){
+				var theConfirm = $ionicPopup.confirm({
+					title:"继续学习？",
+					template:"学习时间足够，是否打算休息？",
+					buttons:[
+						{text:"否",type:"button-royal"},
+						{text:"是",type:"button-dark",onTap:function(e){return "YES";}}
+					]
+				});
+				theConfirm.then(function(res){
+					if(res)
+						console.log("YES");
+					else
+						console.log("NO");
+				});
+			};
+	//提示框
+			$scope.showAlert = function(){
+				var theAlert = $ionicPopup.alert({
+					title:"休息时间",
+					template:"休息时间到，请注意安排！"
+				});
+				theAlert.then(function(res){
+					console.log("alert");
+				});
+			};
+
+		}])
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="popupCtrl">
+	<div class="list">
+		<div class="item"><button class="button button-balanced" ng-click="showPopup()">对话框</button></div>
+		<div class="item"><button class="button button-warning" ng-click="showConfirm()">确认框</button></div>
+		<div class="item"><button class="button button-assertive" ng-click="showAlert()">提示框</button></div>
+	</div>
+	<script id="popup-template.html" type="text/ng-template">
+		<input type="password" ng-model="data.wifi" placeholder="请输入密码..">
+	</script>
+</body>
+</html>

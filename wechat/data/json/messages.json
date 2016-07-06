@@ -1,0 +1,195 @@
+{
+    "messages": [{
+        "id": 3,
+        "name": "实力不可测122",
+        "pic":"img/group.png",
+        "lastMessage": {
+            "originalTime": "2016-06-28 12:20:20",
+            "time": "",
+            "timeFrome1970": 0,
+            "content": "我们都毕业了哦",
+            "isFromeMe": false,
+            "isGroup":true,
+            "isNoSee":true
+        },
+        "noReadMessages":0,
+        "showHints":false,
+        "isTop":0,
+        "messgae":[{
+        }]
+    } ,{
+        "id": 8,
+        "name": "小白兔",
+        "pic": "img/9.jpg",
+        "lastMessage": {
+            "originalTime": "2016-06-07 06:34:55",
+            "time": "",
+            "timeFrome1970": 0,
+            "content": "缺点大家都有、",
+            "isFromeMe": false
+        },
+        "noReadMessages": 9,
+        "showHints": true,
+        "isTop": 0,
+        "message": [{
+            "isFromeMe": false,
+            "content": "你好!",
+            "time": "2015-11-22 08:50:22"
+        }, {
+            "isFromeMe": true,
+            "content": "你好, 你是谁?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "听说你搬出去了，那么快",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": true,
+            "content": "还没啊、周末",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "所以我就说嘛、说好的周末呢",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": false,
+            "content": "搬出去好不习惯",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "你现在还在学校吗？",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": true,
+            "content": "是啊",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "谈、说出来",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": true,
+            "content": "很多企业找到人了",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": true,
+            "content": "还有就是要经验多的",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": true,
+            "content": "实习生一般不会多",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "参加项目写多一点",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": false,
+            "content": "大项目",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "详细点、、",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromeMe": true,
+            "content": "有缺点",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "缺点大家都有、",
+            "time": "2015-11-27 06:34:55"
+        }]
+    }, {
+        "id": 1,
+        "name": "王峰",
+        "pic": "img/ben.png",
+        "lastMessage": {
+            "originalTime": "2016-06-06 5:22:55",
+            "time": "",
+            "timeFrome1970": 0,
+            "content": "明天什么时候去吃饭?",
+            "isFromeMe": false
+        },
+        "noReadMessages": 5,
+        "showHints": true,
+        "isTop": 0,
+        "message": [{
+            "isFromeMe": false,
+            "content": "你好!",
+            "time": "2015-11-22 08:50:22"
+        }, {
+            "isFromeMe": true,
+            "content": "你好, 你是谁?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "明天什么时候去吃饭?",
+            "time": "2015-11-26 5:22:55"
+        }]
+    }, {
+        "id": 7,
+        "name": "潘敏",
+        "pic": "img/max.png",
+        "lastMessage": {
+            "originalTime": "2016-06-05 15:34:55",
+            "time": "",
+            "timeFrome1970": 0,
+            "content": "我就在软件园?",
+            "isFromeMe": false
+        },
+        "noReadMessages": 0,
+        "showHints": false,
+        "isTop": 0,
+        "message": [{
+            "isFromeMe": false,
+            "content": "你好!",
+            "time": "2015-11-22 08:50:22"
+        }, {
+            "isFromeMe": true,
+            "content": "你好, 你是谁?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromeMe": false,
+            "content": "我就在软件园?",
+            "time": "2015-11-22 15:34:55"
+        }]
+    }, {
+        "id": 2,
+        "name": "英国",
+        "pic": "img/mike.png",
+        "lastMessage": {
+            "originalTime": "2016-06-04 15:34:55",
+            "time": "",
+            "timeFrome1970": 0,
+            "content": "中国支持英国民意！",
+            "isFromeMe": false
+        },
+        "noReadMessages": 2,
+        "showHints": true,
+        "isTop": 0,
+        "message": [{
+            "isFromeMe": false,
+            "content": "今天英国退出欧盟",
+            "time": "2016-06-24 12:50:40"
+        }, {
+            "isFromeMe": true,
+            "content": "中国支持英国民意！",
+            "time": "2016-06-24 12:50:40"
+        }]
+    }, {
+        "id": 6,
+        "name": "许仁杰",
+        "pic": "img/perry.png",
+        "lastMessage": {
+            "originalTime": "2014-10-12 15:34:55",
+            "time": "",
+            "timeFrome1970": 0,
+            "content": "好",
+            "isFromeMe": false
+        },
+        "noReadMessages": 0,
+        "showHints": false,
+        "isTop": 0
+    }]
+}

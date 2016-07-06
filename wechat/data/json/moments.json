@@ -1,0 +1,27 @@
+﻿{
+	"data": [{
+		"id":1,
+		"publisher": "张三",
+		"head": "img/9.jpg",
+		"content": "看到一个帅哥、帅哥、帅哥，拍照发一发，顺便测试下显示情况。使用flex布局",
+		"hasPicture": true,
+		"pictures": ["img/1.jpg", "img/2.jpg"],
+		"publishTime": "20分钟前"
+	}, {
+		"id":2,
+		"publisher": "薛之谦",
+		"head": "img/xue.jpg",
+		"content": "我的心愿是：世界和平",
+		"hasPicture": true,
+		"pictures": ["img/xue2.jpg"],
+		"publishTime": "30分钟前"
+	}, {
+		"id":3,
+		"publisher": "王五",
+		"head": "img/ben.png",
+		"content": "这是一条测试用的朋友圈内容、随便写点东西凑字数就是了，不知道够了没有，随便再弄点文字就是了，哎好无聊标点符号都省了",
+		"hasPicture": true,
+		"pictures": ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
+		"publishTime": "40分钟前"
+	}]
+}

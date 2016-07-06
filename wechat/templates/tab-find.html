@@ -1,0 +1,55 @@
+<ion-header-bar align-title="left" class="bar-dark">
+	    <div class="h1 title">微信(16)</div>
+	    <div class="buttons">
+	        <button class="button no-animation button-icon icon ion-android-search" ng-click="search()">
+	        </button>
+	        <button class="button no-animation button-icon icon ion-android-add">
+	        </button>
+	    </div>
+	</ion-header-bar>
+<ion-view on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+    <ion-content>
+       <div class="list">
+        <div class="rj-contacts-index-bar"></div>
+        <ion-item class="rj-item item" ng-click="goMoments()">
+          <div class="rj-contacts-pic rj-royal">
+            <i class="icon ion-aperture"></i>
+          </div>
+          <h2>朋友圈</h2>
+          <span class="badge badge-center badge-assertive">3</span>
+          <span class="icon ion-android-wifi right-arrow"></span>
+        </ion-item>
+        <ion-item class="rj-item item" ng-click="goMedia()">
+       		<div class="rj-contacts-pic rj-energized">
+       			<i class="icon ion-headphone"></i>
+       		</div>
+       		<h2>媒体</h2>
+          <span class="icon ion-music-note right-arrow"></span>
+       	</ion-item>
+        <div class="rj-contacts-index-bar"></div>
+       	<ion-item class="rj-item item">
+       		<div class="rj-contacts-pic rj-positive">
+       			<i class="icon ion-qr-scanner"></i>
+       		</div>
+       		<h2>扫一扫</h2>
+          <span class="icon ion-chevron-right right-arrow"></span>
+       	</ion-item>
+        <div class="rj-contacts-index-bar"></div>
+        <ion-item class="rj-item item" ng-click="goShop()">
+          <div class="rj-contacts-pic rj-assertive">
+            <i class="icon ion-ios-cart"></i>
+          </div>
+          <h2>购物</h2>
+          <span class="icon ion-ios-paw-outline right-arrow"></span>
+        </ion-item>
+        <ion-item class="rj-item item">
+          <div class="rj-contacts-pic rj-balanced">
+            <i class="icon ion-ios-game-controller-b"></i>
+          </div>
+          <h2>游戏</h2>
+          <span class="icon ion-chevron-right right-arrow"></span>
+        </ion-item>
+       </div>
+       
+    </ion-content>
+</ion-view>

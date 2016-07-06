@@ -1,0 +1,401 @@
+/* Empty. Add your own CSS if you like */
+.noSee{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #8c8c8c;
+}
+.rj-contacts-right-bar{
+	display: flex;
+	flex-direction: column;
+}
+.rj-contacts-right-bar div{
+ height:.8rem;
+}
+
+@media screen and (min-width:374px) {
+.rj-contacts-right-bar div{
+	height: .85rem;
+	}
+}
+.rj-royal{
+	color: #B819CC;
+}
+.rj-positive{
+	color: #1541F1;
+}
+.rj-energized{
+	color: #F4ED10;
+}
+.rj-assertive{
+	color:#F01616;
+}
+.rj-balanced{
+	color: #0CE440;
+}
+.badge-center{
+	left: 130px;
+	top:15px;
+}
+.right-arrow{
+	position: absolute;
+	right: 10px;
+	top:15px;
+	color:#261F1F;
+	font-size: 120%;
+}
+.right-qr{
+		position: absolute;
+    right: 0;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    color:#B8AB0B;
+    transform: scale(2);
+}
+.item-avatar .item-content{
+	padding-left: 80px;
+	min-height: 80px;
+}
+.item-avatar .item-content>img:first-child{
+	max-width: 60px;
+	max-height: 60px;
+}
+.item-complex .item-content{
+	padding-right: 48px;
+}
+.item-content h2{
+	margin-top: 8px;
+	font-size: 20px;
+}
+.more-item{
+	background-color: #444;
+	color: #fff;
+}
+.more-item h2{
+	color: #fff;
+}
+.search-input{
+	padding: 6px 0 5px 5px;
+	width: 62%;
+	border-radius:5px;
+	border-color: transparent;
+	background-color:#444;
+}
+.search-input input{
+	width: 100%;
+	border: none;
+	border-bottom:1px solid #04F504;
+}
+.flex-container{
+	float: left;
+	margin-top: 20%;
+	width: 100%;
+	min-height: 400px;
+}
+.flex-item{	
+	float: left;
+	width: calc(100%/3);
+	text-align: center;
+	font-size: 16px;
+}
+.wrap{
+    width: 50px;
+    margin: 0 auto 5%;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    background-color: rgba(111, 102, 102, 0.3);
+  }
+.wrap i{
+font-size: 44px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 2px;
+    /* bottom: 0; */
+    right: 0;
+    color: #38A038;
+}
+.wrap+p{
+	font-size: 16px;
+}
+.momentTop{
+	width: 100%;
+	position: relative;
+	margin-top: -5px;
+	margin-bottom: -5px;
+}
+.momentBack{
+	width: 100%;
+}
+.weixinName{
+    position: absolute;
+    right: 28%;
+    bottom: 5%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.momentMe{
+  position: absolute;
+  right: 10px;
+  max-width: 80px;
+  max-height: 80px;
+  bottom: -25px;
+  background-size: 100%;
+  z-index: 3;
+}
+.momentTop + .list{
+	padding-top: 30px;
+	background-color: #fff;
+}
+.list>.item-avatar:first-child {
+	border-top: none;
+}
+.item-avatar p {
+	overflow: inherit;
+	text-overflow: inherit;
+	white-space: normal;
+}
+.followImgs{
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+}
+.followImg{
+	justify-content: space-between;
+	align-content: flex-start;
+	width: 30%;
+	height: 100%;
+	margin: 1%;
+	border: 1px solid #DDE8DD;
+}
+.bottomOperate{
+	position: relative;
+}
+.publishTime{
+	font-size: 12px;
+	color: #ccc; 
+}
+.operate{
+	position: absolute;
+	right: 5px;
+}
+/*阻止事件捕获传递、好像没作用*/
+.operate i{
+	pointer-events: none;
+}
+.operate i{
+	color: #8C8CDC;
+	font-size: 18px;
+}
+.operateOptions{
+	position: absolute;
+	right: 9%;
+	top: 0;
+	width: 50%;
+	background-color: #000;
+	visibility: hidden;
+}
+.operateOptions p{
+	width: 50%;
+	display: inline-block;
+	color:white;
+  font-size: 16px;
+  text-align: center;
+}
+.comment{
+	margin-left: -5px;
+}
+.like i,.comment i{
+	padding-right: 14px;
+}
+.audio-button{
+	width: 65%;
+	position: absolute;
+	right: 5px;
+	bottom: 20px;
+	opacity: 0;
+	z-index: 2;
+}
+.play-button{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	transform: scale(1.2);
+	z-index: 3;
+	color: blue;
+}
+/*shop*/
+
+.qgitem{
+	float: left;
+	width: 47%;
+	background-color:#fff;
+	margin-bottom: 1.2%;
+	font-size: 12px;
+}
+.avail{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+  border: 1px solid #D4C7C7;
+  box-shadow: 0 0 5px #00C4FF;
+}
+.qgitem .pic{
+	padding-bottom: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.pic img{
+	position: absolute;
+	width: 100%;
+	vertical-align: middle;
+	max-width: 100%;
+}
+.baseinfo{
+	padding: 0 2%;
+	position: relative;
+}
+.baseinfo .name,.baseinfo .merit,.baseinfo .price{
+	height: 20px;
+	line-height: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow:hidden;
+}
+.baseinfo .name{
+	margin-top: 4px;
+	font-size: 14PX;
+
+}
+.baseinfo .merit{
+	font-size: 12px;
+	color: #1A31D8;
+	width: 75%;
+}
+.baseinfo .price{
+	position: absolute;
+  width: 23%;
+  padding-left: 2%;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+  color: #C31515;
+}
+/*设置详细页面样式*/
+.back-title{
+	line-height: 36px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.setting-item{
+	padding: 15px 10px;
+}
+.badge-new{
+	left: 96px;
+	top: 12px;
+	font-weight: normal;
+}
+.unprotected{
+	float: right;
+	color:#656060;
+}
+.unprotected i {
+	width: 20px;
+	height: 20px;
+	border:1px solid red;
+	border-radius:50%;
+	background-color: red;
+	color:#fff;
+	text-align: center;
+}
+ion-content{
+	background-color:#e8e8e8;
+}
+/*钱包*/
+.walletTitle{
+	margin-left: 10px;
+}
+.first-title{
+font-size: 18px;
+}
+.second-title{
+	color:#fff;
+	font-size: 12px;
+	display: block;
+}
+.right-more{
+	position: absolute;
+	right: 5px;
+	color: #fff;
+}
+.wallet-part1{
+	/*float: left;*/
+	width: 100%;
+	min-height: 130px;
+	margin-top: 6px;
+	background-color: #545654;
+}
+.top-icon{
+	width: 50px;
+	height: 50px;
+	margin: 10% auto 5%;
+}
+.top-icon i{
+	font-size: 44px;
+	color: #fff;
+}
+.top-icon + p{
+	margin-bottom: 0;
+	color: #fff;
+}
+.flex-item span{
+	color: #fff;
+}
+.wallet-title{
+	margin-top: 4%;
+	margin-bottom: 3%;
+	margin-left: 3%;
+	font-size: 18px;
+	color: #545854;
+}
+.wallet-part2,.wallet-part3{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #fff;
+}
+.card-box{
+	flex-shrink: 1;
+	width: 33%;
+	width: calc((100%-2)/3);
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 5%;
+}
+.wallet-part2:last-child,.wallet-part3:last-child{
+	border:none;
+}
+.card-icon{
+	width: 44px;
+	height: 44px;
+	margin: 10% auto;
+}
+.card-icon i{
+	font-size: 40px;
+	/*color: #8327E4;*/
+}
+.card-name{
+	font-size: 16px;
+	color:#545654;
+}
+.qqFace {
+	position: absolute;
+	bottom: 0;
+}
+.qqFace img {
+	width: 100%;
+	height: auto;
+}

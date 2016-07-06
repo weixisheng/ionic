@@ -1,0 +1,52 @@
+<ion-header-bar class="bar-dark">
+	<div class="buttons">
+	<button class="button button-icon icon ion-arrow-left-c" ui-sref="tab.find"></button>
+	<h2 class="title">朋友圈</h2>
+	<button class="button button-icon icon ion-android-camera"></button>
+	</div>
+</ion-header-bar>
+<ion-content>
+<div class="momentTop">
+	<img src="img/bg.jpg" alt="背景图片" class="momentBack">
+	<span class="weixinName">囍</span>
+	<img src="img/me.jpg" alt="头像" class="momentMe">
+</div>
+	 <div class="list">
+
+        <li class="item item-avatar" ng-repeat="item in moments">
+          <img ng-src="{{item.head}}" alt="发布者头像">
+          <h2>{{item.publisher}}</h2>
+          <p>{{item.content}}</p>
+          <div class="followImgs" ng-show="{{item.hasPicture}}">
+            <img ng-src="{{pic}}" alt="" class="followImg" ng-repeat="pic in item.pictures">
+          </div>
+          <div class="bottomOperate">
+            <span class="publishTime">{{item.publishTime}}</span>
+            <span class="operate" ng-click="showOperate({{item.id}})">
+              <i class="icon ion-android-textsms"></i>
+            </span>
+            <div class="operateOptions operateBox{{item.id}}">
+              <p class="like"><i class="icon ion-android-favorite-outline"></i>赞</p>
+              <p class="comment"><i class="icon ion-ios-chatbubble-outline"></i>评论</p>
+            </div>
+          </div>
+        </li>
+       
+</ion-content>
+<!-- <script>
+  //获取图片信息，修改宽度。一张图片60%，两张图片45%，其余情况默认
+            var imgList = document.getElementsByClassName("followImgs");
+            for (var i = 0, leng = imgList.length; i < leng; i++) {
+                var futu = imgList[i].children;
+                var pictures = futu.length;
+                switch (pictures) {
+                    case 1:
+                        futu[0].style.width = "60%";
+                        break;
+                    case 2:
+                        futu[0].style.width = "45%";
+                        futu[1].style.width = "45%";
+                        break;
+                }
+            }
+</script> -->

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>滑动框</title>
+	<style>
+	html,body,.slider{
+		margin: 0;
+		height: 100%;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			text-align:center;
+			font-size: 50px;
+			position: relative;
+			}
+		.box1{
+			background-color:red;
+		}
+		.box2{
+			background-color: green;
+		}
+		.box3{
+			background-color:blue;
+		}
+		.box span{
+			position: absolute;
+			height: 100px;
+			margin: auto;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/ionic.min.css">
+	<script src="../js/ionic.bundle.min.js"></script>
+	<script>
+		angular.module("myApp",["ionic"])
+		.controller("slideCtrl",["$scope",function($scope){
+			$scope.slideHasChanged = function($index){
+				console.log($index);
+			}
+		}])
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="slideCtrl">
+
+	<ion-slide-box on-slide-changed="slideHasChanged($index)">
+		<ion-slide>
+			<div class="box box1"><span>11</span></div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box box2"><span>22</span></div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box box3"><span>33</span></div>
+		</ion-slide>
+	</ion-slide-box>
+</body>
+</html>
