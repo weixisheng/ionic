@@ -214,6 +214,8 @@ angular.module('wechat.controllers', [])
       }, 0);
 
     });
+
+    //增加表情图片
       $(".ion-happy-outline").each(function(index,element){
         $(this).click(function(){
           var currentBtnId = $(this).attr("data-id");
@@ -228,15 +230,8 @@ angular.module('wechat.controllers', [])
           qqFace.css({"visibility":"hidden"});
          }
         });
-      });
-     // var qqFace = document.getElementsByClassName("facebox"+qqFaceId)[0];
-          // if (qqFace.style.visibility == "hidden") {
-          //   document.getElementById("footer"+qqFaceId).style.bottom = "173px";
-          //   qqFace.style.visibility = "visible";
-          // } else {
-          //    document.getElementById("footer"+qqFaceId).style.bottom = "0";
-          //   qqFace.style.visibility = "hidden";
-          // }
+      });//结束
+
     window.addEventListener("native.keyboardshow", function(e) {
       viewScroll.scrollBottom();
     });
