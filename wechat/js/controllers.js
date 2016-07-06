@@ -43,7 +43,7 @@ angular.module('wechat.controllers', [])
   $scope.showOperate = function(id) {
 
     var optionBlock = document.getElementsByClassName("operateBox" + id)[0];
-    if (optionBlock.style.visibility == "hidden")
+    if (optionBlock.style.visibility == "hidden" || !optionBlock.style.visibility)
       optionBlock.style.visibility = "visible";
     else
       optionBlock.style.visibility = "hidden";
