@@ -74,6 +74,11 @@ angular.module('wechat.routes', [])
             templateUrl:"templates/settingDetail.html",
             controller:"settingCtrl"
         })
+        .state("newMessage",{
+            url:"/settingDetail/newMessage",
+            templateUrl:"templates/newMessage.html",
+            controller:"settingCtrl"
+        })
         .state("myWallet",{
             url:"/myWallet",
             templateUrl:"templates/wallet.html",

@@ -1,0 +1,68 @@
+<ion-header-bar class="bar-dark">
+	<div class="buttons">
+	<button class="button button-icon icon ion-android-arrow-back" ui-sref="settingDetail"></button>
+	</div>
+	<span class="back-title">新消息提醒</span>
+</ion-header-bar>
+<ion-content class="has-header">
+	<div class="rj-contacts-index-bar"></div>
+	<ul class="list">
+		<li class="item item-toggle item-padding">
+			接收新消息通知
+			<label for="" class="toggle toggle-balanced">
+				<input type="checkbox" checked="">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</li>
+		<li class="item item-toggle item-padding">
+			通知显示消息详情
+			<label for="" class="toggle toggle-balanced">
+				<input type="checkbox" checked="">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+			<div class="sub-description">若关闭，当接收微信消息时，通知提示将不显示发信人和内容摘要。</div>
+		</li>
+	</ul>
+
+	<ul class="list">
+		<li class="item item-toggle item-padding">
+			声音
+			<label for="" class="toggle toggle-balanced">
+				<input type="checkbox" checked="">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</li>
+		<li class="item item-toggle item-padding">
+			新消息提示音
+			<span class="rj-push-right" style="font-size: 16px;">Meteor</span>
+		</li>
+		<li class="item item-toggle item-padding">
+			振动
+			<label for="" class="toggle toggle-balanced">
+				<input type="checkbox" >
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</li>
+	</ul>
+
+	<ul class="list">
+		<li class="item item-toggle item-padding">
+			朋友圈照片更新
+			<label for="" class="toggle toggle-balanced">
+				<input type="checkbox" checked="">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+			<div class="sub-description">关闭后，有朋友圈更新时，不再出现红点提示。</div>
+		</li>
+	</ul>
+</ion-content>
