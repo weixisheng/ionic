@@ -34,6 +34,7 @@
 	color: #0CE440;
 }
 .badge-center{
+	position: absolute;
 	left: 130px;
 	top:15px;
 }
@@ -292,11 +293,11 @@ font-size: 44px;
 .setting-item{
 	padding: 15px 10px;
 }
-.badge-new{
+/*.badge-new{
 	left: 96px;
 	top: 12px;
 	font-weight: normal;
-}
+}*/
 .unprotected{
 	float: right;
 	color:#656060;
@@ -311,7 +312,7 @@ font-size: 44px;
 	text-align: center;
 }
 ion-content{
-	background-color:#e8e8e8;
+	background-color:#EBEBEB;
 }
 /*钱包*/
 .walletTitle{
@@ -354,7 +355,7 @@ font-size: 18px;
 	color: #fff;
 }
 .wallet-title{
-	margin-top: 4%;
+	margin-top: 3%;
 	margin-bottom: 3%;
 	margin-left: 3%;
 	font-size: 18px;
@@ -408,4 +409,35 @@ font-size: 18px;
 	padding-right: 0;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+.item-set-des{
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	color: #8c8c8c;
+}
+footer{
+	text-align: center;
+}
+footer div{
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #4C6296;
+}
+footer p {
+	margin-bottom: 0;
+	color: #7B7474;
+}
+/*退出弹出框*/
+.popover-box{
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  margin: auto;
+	width: 80%;
+	border-radius: 5px;
+}
+.exit-item{
+	padding: 15px 10px 25px 30px;
 }

@@ -152,7 +152,7 @@ angular.module('wechat.controllers', [])
   };
 })
 
-.controller('settingCtrl', function($scope, $state, $ionicModal) {
+.controller('settingCtrl', function($scope, $state, $ionicModal,$ionicPopover) {
   $scope.onSwipeRight = function() {
     $state.go("tab.find");
   };
@@ -183,6 +183,21 @@ angular.module('wechat.controllers', [])
   };
   $scope.goWallet = function(){
     $state.go("myWallet");
+  };
+  //退出框
+  $scope.confirmPop = $ionicPopover.fromTemplateUrl("exitModal.html",{
+    scope:$scope
+  });
+  $ionicPopover.fromTemplateUrl("exitModal.html",{
+    scope:$scope
+  }).then(function(popover){
+    $scope.confirmPop = popover;
+  });
+  $scope.exit = function($event){
+    $scope.confirmPop.show($event);
+  };
+  $scope.hidePop = function(){
+    $scope.confirmPop.hide();
   };
 })
 

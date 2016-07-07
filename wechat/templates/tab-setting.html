@@ -89,7 +89,6 @@
     <ion-modal-view ng-click="closeModal()" style="margin:12% 10% 0 10%;min-height:50%;width:80%;background-color:rgba(70,70,70,0.68);">
         <ion-header-bar style="background-color:rgba(70,70,70,0.68);">
             <h2 class="title" style="color:white;">扫一扫加我微信哦~</h2>
-            <!-- <button class="button button-clear" ng-click="closeModal()">&times;</button> -->
         </ion-header-bar>
         <ion-content>
             <div class="padding">
@@ -97,4 +96,22 @@
             </div>
         </ion-content>
     </ion-modal-view>
+</script>
+
+<script type="text/ng-template" id="exitModal.html">
+    <div class="list popover-box">
+        <ion-item class="rj-item item exit-item" ng-click="hidePop()">
+            <div class="rj-contacts-pic rj-positive">
+                <i class="icon ion-person"></i>
+            </div>
+            <h2>退出当前帐号</h2>
+        </ion-item>       
+         <ion-item class="rj-item item exit-item" ng-click="hidePop()">
+            <div class="rj-contacts-pic rj-assertive">
+                <i class="icon ion-power"></i>
+            </div>
+            <h2>关闭微信</h2>
+        </ion-item>
+      
+    </div>
 </script>

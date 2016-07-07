@@ -77,7 +77,37 @@ angular.module('wechat.routes', [])
         .state("newMessage",{
             url:"/settingDetail/newMessage",
             templateUrl:"templates/newMessage.html",
-            controller:"settingCtrl"
+            // controller:"settingCtrl"
+        })
+        .state("aloneMode",{
+            url:"/settingDetail/aloneMode",
+            templateUrl:"templates/aloneMode.html",
+            // controller:"settingCtrl"
+        })
+        .state("chat",{
+            url:"/settingDetail/chat",
+            templateUrl:"templates/chat.html",
+            // controller:"settingCtrl"
+        })
+        .state("privacy",{
+            url:"/settingDetail/privacy",
+            templateUrl:"templates/privacy.html",
+            // controller:"settingCtrl"
+        })
+        .state("common",{
+            url:"/settingDetail/common",
+            templateUrl:"templates/common.html",
+            // controller:"settingCtrl"
+        })
+        .state("security",{
+            url:"/settingDetail/security",
+            templateUrl:"templates/security.html",
+            // controller:"settingCtrl"
+        })
+        .state("about",{
+            url:"/settingDetail/about",
+            templateUrl:"templates/about.html",
+            // controller:"settingCtrl"
         })
         .state("myWallet",{
             url:"/myWallet",
