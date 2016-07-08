@@ -1,9 +1,9 @@
 ﻿{
 	"data": [{
 		"id":1,
-		"publisher": "张三",
+		"publisher": "微商",
 		"head": "img/9.jpg",
-		"content": "看到一个帅哥、帅哥、帅哥，拍照发一发，顺便测试下显示情况。使用flex布局",
+		"content": "走过路过千万不要错过、九块九你买不了吃亏、九块九你买不了上当",
 		"hasPicture": true,
 		"pictures": ["img/1.jpg", "img/2.jpg"],
 		"publishTime": "20分钟前"

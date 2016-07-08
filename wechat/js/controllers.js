@@ -129,6 +129,9 @@ angular.module('wechat.controllers', [])
       "messageId": message.id
     });
   };
+$scope.groupDetail = function(){
+        $state.go("groupDetail");
+      };
   $scope.$on("$ionicView.beforeEnter", function() {
     // console.log($scope.messages);
     $scope.messages = messageService.getAllMessages();
@@ -202,12 +205,10 @@ angular.module('wechat.controllers', [])
 })
 
 .controller('messageDetailCtrl', ['$scope', '$stateParams',
-  'messageService', '$ionicScrollDelegate', '$timeout',
-  function($scope, $stateParams, messageService, $ionicScrollDelegate, $timeout) {
+  'messageService', '$ionicScrollDelegate', '$timeout', "$state",
+  function($scope, $stateParams, messageService, $ionicScrollDelegate, $timeout, $state) {
     var viewScroll = $ionicScrollDelegate.$getByHandle('messageDetailsScroll');
-    // console.log("enter");
     $scope.doRefresh = function() {
-      // console.log("ok");
       $scope.messageNum += 5;
       $timeout(function() {
         $scope.messageDetils = messageService.getAmountMessageById($scope.messageNum,
@@ -215,7 +216,6 @@ angular.module('wechat.controllers', [])
         $scope.$broadcast('scroll.refreshComplete');
       }, 200);
     };
-
     $scope.$on("$ionicView.beforeEnter", function() {
       $scope.message = messageService.getMessageById($stateParams.messageId);
       $scope.message.noReadMessages = 0;
@@ -227,7 +227,6 @@ angular.module('wechat.controllers', [])
       $timeout(function() {
         viewScroll.scrollBottom();
       }, 0);
-
     });
 
     //增加表情图片
@@ -252,3 +251,27 @@ angular.module('wechat.controllers', [])
     });
   }
 ])
+.controller('groupDetailCtrl', ['$scope','$state', function($scope, $state){
+  $scope.groupDetail = function(){
+    $state.go("groupDetail");
+  };
+    $scope.groupInfo = function(){
+      $state.go("groupInfo");
+    };
+      //增加表情图片
+      $(".ion-happy-outline").each(function(index,element){
+        $(this).click(function(){
+          var currentBtnId = $(this).attr("data-id");
+          var currentId = currentBtnId.slice(3);
+         var qqFace= $(this).parent().parent().siblings('.facebox'+currentId);
+         if(qqFace.css("visibility")=="hidden"){
+          $("#footer"+currentId).css({"bottom":"173px"});
+          qqFace.css({"visibility":"visible"});
+         }
+         else{
+          $("#footer"+currentId).css({"bottom":"0"});
+          qqFace.css({"visibility":"hidden"});
+         }
+        });
+      });//结束
+}])

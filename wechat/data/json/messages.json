@@ -1,23 +1,5 @@
 {
     "messages": [{
-        "id": 3,
-        "name": "实力不可测122",
-        "pic":"img/group.png",
-        "lastMessage": {
-            "originalTime": "2016-06-28 12:20:20",
-            "time": "",
-            "timeFrome1970": 0,
-            "content": "我们都毕业了哦",
-            "isFromeMe": false,
-            "isGroup":true,
-            "isNoSee":true
-        },
-        "noReadMessages":0,
-        "showHints":false,
-        "isTop":0,
-        "messgae":[{
-        }]
-    } ,{
         "id": 8,
         "name": "小白兔",
         "pic": "img/9.jpg",

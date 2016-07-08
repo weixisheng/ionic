@@ -17,6 +17,16 @@ angular.module('wechat.routes', [])
                 }
             }
         })
+        .state("groupDetail",{
+            url:"/groupDetail",
+            templateUrl:"templates/groupDetail.html",
+            controller:"groupDetailCtrl"
+        })
+        .state("groupInfo",{
+            url:"/groupDetail/groupInfo",
+            templateUrl:"templates/groupInfo.html",
+            controller:"groupDetailCtrl"
+        })
         .state('messageDetail', {
             url: '/messageDetail/:messageId',
             templateUrl: "templates/message-detail.html",
